@@ -1,5 +1,7 @@
 #include "panzer_ogl_lib.hpp"
 
+#ifndef __APPLE__
+
 #define PROCESS_OGL_FUNCTION( TYPE, NAME ) TYPE NAME= nullptr
 #include "functions_list.h"
 #undef PROCESS_OGL_FUNCTION
@@ -17,3 +19,5 @@ void GetGLFunctions(
 
 	#undef PROCESS_OGL_FUNCTION
 }
+
+#endif //__APPLE__
